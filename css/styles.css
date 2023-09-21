@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border-radius: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5vw;
+    margin: 40px;
+}
+
+#pegado img{
+    width: 5vw;
+    height: 5vw;
+    position: fixed;
+    right: 50px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: RGB(1, 130, 213);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.5vw;
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#social-h {
+    /*1 Header*/
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+#social-h img {
+    width: 3vw;
+}
+
+/*---------------------*/
+
+#nav-h {
+    /*2 Header*/
+    display: flex;
+}
+
+#logo-h {
+    /* div logo */
+    width: 20%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#logo-h img {
+    width: 8vw;
+}
+
+#links-h {
+    /* div de los links*/
+    background-color: RGB(1, 130, 213);
+    border-radius: 5px;
+    width: 90%;
+    height: 2.5vw;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+#links-h a {
+    text-decoration: none;
+    font-style: oblique;
+    margin-right: 5px;
+    font-size: 2vw;
+    color: RGB(255, 255, 255);
+}
+
+#links-h a:hover {
+    background-color: red;
+}
+
+
+
+/*---------------------------*/
+
+#principal-m {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+.tarjeta-m {
+    width: 50%;
+    text-align: center;
+    margin: 5px;
+}
+
+.tarjeta-m img {
+    width: 90%;
+    margin-top: 20px;
+}
+
+
+/*-------------------------*/
+#promos-m {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.promo-m {
+    width: 40%;
+    text-align: center;
+    margin: 10px;
+}
+
+.promo-m img {
+    width: 80%;
+    height: 25vw;
+}
+
+/*---------------------------*/
+
+.info1-m {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-m {
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.info-m img {
+    width: 30vw;
+    margin: 10px;
+}
+
+.info-m p {
+    text-align: justify;
+    margin: 10px;
+}
+
+
+/*---------------------------*/
+#pie1-f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-f {
+    text-align: center;
+    margin: 5px;
+    width: 10%;
+}
+
+.pie-f img {
+    width: 50px;
+    margin: 5px;
+}
+
+.text-f {
+    text-align: center;
+    margin: 5px;
+    width: 20%;
+}
+
+.text-f a,
+h2 {
+    font-size: 90%;
+    margin: 1px;
+    text-decoration: none;
+}
+
+
+/*-------------------------------*/
+
+
+#pie2-f {
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-f {
+    width: 30%;
+    text-align: center;
+}
+
+#logo-f img {
+    width: 8vw;
+
+}
+
+#social-f {
+    width: 30%;
+    text-align: center;
+}
+
+#social-f img {
+    width: 15%;
+}
+
+#news-f {
+    text-align: center;
+    width: 40%;
+}
+
+#news-f input {
+    font-size: 1.2vw;
+}
+
+#pie3-f {
+    font-size: 1vw;
+    font-style: italic;
+    text-align: center;
+    height: 20px;
+}
+
+#pie3-f h3 {
+    margin-right: 50px;
+}
+
+/*Pagina de Conctactos*/
+#section1-m {
+    text-align: center;
+    margin: 10px;
+}
+
+#section1-m img {
+    width: 80%;
+}
+
+#section2-m {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#div1-s2 {
+    width: 30%;
+    margin-right: 10px;
+}
+
+#div2-s2 {
+    margin-left: 10px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div2-s2 iframe {
+    width: 90%;
+    height: 90%;
+
+}
+
+#article1-m {
+    text-align: center;
+}
+
+#div1-a1-m {
+    margin-top: 20px;
+}
+
+#div1-a1-m p {
+    text-align: justify;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*-------------Pagina de Nosotros-------------*/
+#div1-m-nosotros {
+    width: 100%;
+    text-align: center;
+}
+
+#div1-m-nosotros img {
+    margin: 10px;
+    width: 80%;
+}
+
+
+#section1-m-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div2-m-nosotros {
+    margin: 10px;
+    width: 50%;
+}
+
+#div2-m-nosotros p {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 30px;
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+#div3-m-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#div3-m-nosotros iframe {
+    margin: 10px;
+    width: 35vw;
+    height: 35vw;
+}
+
+#div4-m-nosotros {
+    text-align: center;
+    width: 100%;
+}
+
+#div4-m-nosotros img {
+    text-align: center;
+    width: 80%;
+    margin: 20px;
+}
+
+/*---------------lubricentro---------*/
+#constructor {
+    text-align: center;
+    margin: 50px;
+}
+
+#enconstruccion {
+    text-align: center;
+    background-color: red;
+    color: white;
+    margin: 20px;
+}
+
