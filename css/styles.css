@@ -1,21 +1,9 @@
+/* General */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    border-radius: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5vw;
-    margin: 40px;
-}
-
-#pegado img{
-    width: 5vw;
-    height: 5vw;
-    position: fixed;
-    right: 50px;
 }
 
 button {
@@ -32,8 +20,26 @@ button {
     animation-iteration-count: infinite;
 }
 
+body {
+    border-radius: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5vw;
+    margin: 40px;
+}
+
+
+/* Body */
+
+#pegado img {
+    width: 5vw;
+    height: 5vw;
+    position: fixed;
+    right: 50px;
+}
+
+/* Nav header */
+
 #social-h {
-    /*1 Header*/
     text-align: right;
     margin-top: 20px;
     margin-right: 100px;
@@ -355,3 +361,30 @@ h2 {
     margin: 20px;
 }
 
+
+/* ------Maqueta--------- */
+body {
+
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas:
+        'header header header'
+        'header header header'
+        'main main main'
+        'footer footer footer';
+}
+
+header {
+    background-color: aqua;
+}
+
+main {
+    background-color: bisque;
+}
+
+footer {
+    background-color: lightblue;
+}
