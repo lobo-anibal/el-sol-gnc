@@ -6,78 +6,125 @@
 
 body {
     border-radius: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5vw;
     margin: 40px;
 }
 
-#pegado img{
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: RGB(1, 130, 213);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5vw;
+    width: 80%;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, );
+    grid-template-areas: "header1 header1 header1"
+        "header2 header2 header2"
+        "principal principal principal"
+        "section1 section1 section1"
+        "section2 section2 section2"
+        "footer1 footer1 footer1"
+        "footer2 footer2 footer2";
+}
+
+.container header,
+footer,
+section,
+main {
+    border: 2px solid lightsalmon;
+}
+
+
+.header1 {
+    grid-area: header1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 6vw;
+}
+
+.header2 {
+    grid-area: header2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+}
+
+.principal {
+    grid-area: principal;
+}
+
+.section1 {
+    grid-area: section1;
+}
+
+.section2 {
+    grid-area: section2;
+}
+
+.footer1 {
+    grid-area: footer1;
+
+}
+
+.footer2 {
+    grid-area: footer2;
+
+}
+
+/* logo pegado */
+#pegado img {
     width: 5vw;
     height: 5vw;
     position: fixed;
     right: 50px;
 }
 
-button {
-    border-radius: 10px;
-    background-color: RGB(1, 130, 213);
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    font-size: 1.5vw;
-    display: inline-block;
-    margin: 0 0.5rem;
-    animation-name: pulse;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
+/* social iconos */
 #social-h {
-    /*1 Header*/
-    text-align: right;
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-bottom: 20px;
+    padding: 10px;
 }
 
 #social-h img {
     width: 3vw;
 }
 
-/*---------------------*/
-
-#nav-h {
-    /*2 Header*/
-    display: flex;
-}
-
+/* logo y menu de navegacion */
 #logo-h {
-    /* div logo */
-    width: 20%;
-    margin-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
+    margin-left: 10px;
 }
 
-
 #logo-h img {
-    width: 8vw;
+    width: 10vw;
 }
 
 #links-h {
-    /* div de los links*/
+    display: flex;
     background-color: RGB(1, 130, 213);
     border-radius: 5px;
     width: 90%;
-    height: 2.5vw;
-    text-align: center;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 4vw;
+    align-items: center;
+    justify-content: center;
 }
-
 
 #links-h a {
     text-decoration: none;
@@ -91,47 +138,51 @@ button {
     background-color: red;
 }
 
-
-
-/*---------------------------*/
+/*----------- principal -------*/
 
 #principal-m {
     display: flex;
-    margin: 20px;
     justify-content: center;
 }
 
 .tarjeta-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 50%;
-    text-align: center;
+    margin: 20px;
+}
+
+.tarjeta-m img,
+p {
+    width: 30vw;
     margin: 5px;
 }
 
-.tarjeta-m img {
-    width: 90%;
-    margin-top: 20px;
-}
-
-
-/*-------------------------*/
+/*----------- Promociones -----------section 1---*/
 #promos-m {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 20px;
 }
 
 .promo-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 40%;
-    text-align: center;
     margin: 10px;
 }
 
 .promo-m img {
-    width: 80%;
+    width: 20vw;
     height: 25vw;
+    padding: 5px;
 }
 
-/*---------------------------*/
+/*-------Info-----------section 2----------*/
 
 .info1-m {
     display: flex;
@@ -140,23 +191,26 @@ button {
 }
 
 .info-m {
-    margin: 10px;
-    width: 50%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 50vw;
 }
 
 .info-m img {
     width: 30vw;
-    margin: 10px;
+    margin: 5px;
 }
 
 .info-m p {
-    text-align: justify;
+    text-align: center;
     margin: 10px;
 }
 
 
-/*---------------------------*/
+
+/*----------footer 1-----------------*/
 #pie1-f {
     display: flex;
     justify-content: center;
@@ -170,13 +224,15 @@ button {
 }
 
 .pie-f img {
-    width: 50px;
+    width: 5vw;
     margin: 5px;
 }
 
 .text-f {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin: 5px;
+    margin: 1px;
     width: 20%;
 }
 
@@ -187,57 +243,82 @@ h2 {
     text-decoration: none;
 }
 
-
-/*-------------------------------*/
+/*-------------------------footer 2 ----------------------*/
 
 
 #pie2-f {
-    height: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vw;
 }
 
 #logo-f {
-    width: 30%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.3%;
 }
 
 #logo-f img {
     width: 8vw;
-
 }
 
 #social-f {
-    width: 30%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
 }
 
 #social-f img {
-    width: 15%;
+    width: 4vw;
+    margin: 5px;
 }
+
+#social-f  h2{
+font-size: 1.5vw;
+}
+
 
 #news-f {
     text-align: center;
-    width: 40%;
+    width: 33.3%;
 }
 
+#news-f h2{
+    font-size: 1.5vw;
+}
 #news-f input {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
+    width: 100%;
+    height: 20px;
 }
 
+#form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form1 button{
+    padding: 5px;
+    width: 7vw;
+}
+
+/*--------------- Desarrollado por----------- */
 #pie3-f {
     font-size: 1vw;
     font-style: italic;
     text-align: center;
-    height: 20px;
 }
 
 #pie3-f h3 {
     margin-right: 50px;
 }
 
-/*Pagina de Conctactos*/
+
+/*-------------------Pagina de Conctactos-------------*/
 #section1-m {
     text-align: center;
     margin: 10px;
@@ -354,4 +435,3 @@ h2 {
     color: white;
     margin: 20px;
 }
-
