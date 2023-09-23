@@ -1,9 +1,12 @@
+/* General */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
     border-radius: 25px;
     font-family: Georgia, Times, 'Times New Roman', serif;
@@ -15,18 +18,29 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+=======
+button {
+>>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
     border-radius: 10px;
     background-color: RGB(1, 130, 213);
     color: white;
     padding: 10px;
+<<<<<<< HEAD
     margin: 5px;
     font-size: 1.5vw;
     width: 80%;
+=======
+    margin: 10px;
+    font-size: 1.5vw;
+    display: inline-block;
+    margin: 0 0.5rem;
+>>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
     animation-name: pulse;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
+<<<<<<< HEAD
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -87,6 +101,18 @@ main {
 }
 
 /* logo pegado */
+=======
+body {
+    border-radius: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5vw;
+    margin: 40px;
+}
+
+
+/* Body */
+
+>>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
 #pegado img {
     width: 5vw;
     height: 5vw;
@@ -94,9 +120,19 @@ main {
     right: 50px;
 }
 
+<<<<<<< HEAD
 /* social iconos */
 #social-h {
     padding: 10px;
+=======
+/* Nav header */
+
+#social-h {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+>>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
 }
 
 #social-h img {
@@ -434,4 +470,35 @@ font-size: 1.5vw;
     background-color: red;
     color: white;
     margin: 20px;
+<<<<<<< HEAD
+=======
+}
+
+
+/* ------Maqueta--------- */
+body {
+
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas:
+        'header header header'
+        'header header header'
+        'main main main'
+        'footer footer footer';
+}
+
+header {
+    background-color: aqua;
+}
+
+main {
+    background-color: bisque;
+}
+
+footer {
+    background-color: lightblue;
+>>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
 }
