@@ -16,6 +16,10 @@ body {
     background-color: rgb(223, 212, 212);
 }
 
+hr {
+    color: yellow;
+}
+
 button {
     display: flex;
     align-items: center;
@@ -34,8 +38,8 @@ button {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, );
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(7, auto);
     grid-template-areas: "header1 header1 header1"
         "header2 header2 header2"
         "principal principal principal"
@@ -66,6 +70,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .section1 {
@@ -187,7 +192,7 @@ p {
 
 /*-------Info-----------section 2----------*/
 
-.info-m {
+.info-m1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,16 +201,31 @@ p {
     width: 40vw;
 }
 
+.info-m2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 40vw;
+}
 
-
-
-
-.info-m img {
-   max-width: 25vw;
+.info-m1 img {
+    width: 25vw;
     margin: 5px;
 }
 
-.info-m p {
+.info-m2 img {
+    width: 25vw;
+    margin: 5px;
+}
+
+.info-m1 p {
+    text-align: center;
+    margin: 10px;
+}
+
+.info-m2 p {
     text-align: center;
     margin: 10px;
 }
@@ -241,10 +261,6 @@ h2 {
 }
 
 /*-------------------------footer 2 ----------------------*/
-
-
-#pie2-f {}
-
 #logo-f {
     display: flex;
     align-items: center;
@@ -313,18 +329,67 @@ h2 {
 
 
 /*-----Media Queries----------*/
-media (max-width: 768px) {
+
+@media (max-width: 768px) {
     body {
-        margin: 10px; /* Reducir el margen en dispositivos móviles */
-        font-size: 1.2vw; /* Ajustar el tamaño de fuente para dispositivos móviles */
+        margin: 5px;
     }
 
     .container {
-        grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna en dispositivos móviles */
+        background-color: aqua;
     }
 
-}
+    .header1 {}
 
+    .header2 {}
+
+    .principal {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .principal img {
+        width: 40vh;
+    }
+
+    .section1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .section1 img {
+        width: 40vh;
+        height: auto;
+    }
+
+    .section2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .section2 img {
+        width: 40vh;
+        height: auto;
+    }
+
+    .section2 p {
+        background-color: bisque;
+        width: 40vh;
+        font-size: 1rem;
+    }
+
+
+
+    .footer1 {}
+
+    .footer2 {}
+}
 
 
 
