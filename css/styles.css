@@ -7,10 +7,13 @@
 }
 
 body {
+    border: 2px solid rgb(184, 182, 182); 
     border-radius: 25px;
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5vw;
     margin: 40px;
+    padding: 10px;
+    background-color: rgb(223, 212, 212);
 }
 
 button {
@@ -46,7 +49,7 @@ button {
 footer,
 section,
 main {
-    border: 2px solid lightsalmon;
+    /* border: 2px solid lightsalmon; */
 }
 
 
@@ -68,24 +71,38 @@ main {
 
 .principal {
     grid-area: principal;
+    display: flex;
+    justify-content: center;
 }
 
 .section1 {
     grid-area: section1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .section2 {
     grid-area: section2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer1 {
     grid-area: footer1;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer2 {
     grid-area: footer2;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
 }
 
 /* logo pegado */
@@ -142,11 +159,6 @@ main {
 
 /*----------- principal -------*/
 
-#principal-m {
-    display: flex;
-    justify-content: center;
-}
-
 .tarjeta-m {
     display: flex;
     flex-direction: column;
@@ -163,12 +175,6 @@ p {
 }
 
 /*----------- Promociones -----------section 1---*/
-#promos-m {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
 
 .promo-m {
     display: flex;
@@ -185,12 +191,6 @@ p {
 }
 
 /*-------Info-----------section 2----------*/
-
-.info1-m {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .info-m {
     display: flex;
@@ -213,11 +213,6 @@ p {
 
 
 /*----------footer 1-----------------*/
-#pie1-f {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .pie-f {
     text-align: center;
@@ -249,10 +244,7 @@ h2 {
 
 
 #pie2-f {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vw;
+   
 }
 
 #logo-f {
@@ -318,6 +310,20 @@ font-size: 1.5vw;
 #pie3-f h3 {
     margin-right: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*-------------------Pagina de Conctactos-------------*/
