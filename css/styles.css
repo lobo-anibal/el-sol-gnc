@@ -124,15 +124,6 @@ body {
 /* social iconos */
 #social-h {
     padding: 10px;
-=======
-/* Nav header */
-
-#social-h {
-    text-align: right;
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-bottom: 20px;
->>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
 }
 
 #social-h img {
@@ -470,35 +461,4 @@ font-size: 1.5vw;
     background-color: red;
     color: white;
     margin: 20px;
-<<<<<<< HEAD
-=======
-}
-
-
-/* ------Maqueta--------- */
-body {
-
-    display: grid;
-    gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-    grid-template-areas:
-        'header header header'
-        'header header header'
-        'main main main'
-        'footer footer footer';
-}
-
-header {
-    background-color: aqua;
-}
-
-main {
-    background-color: bisque;
-}
-
-footer {
-    background-color: lightblue;
->>>>>>> 0c9f6b5a1243509344b33a3eafda432508cc7684
 }
