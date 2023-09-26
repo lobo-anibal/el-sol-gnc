@@ -10,16 +10,14 @@ body {
     border: 2px solid rgb(184, 182, 182);
     border-radius: 25px;
     font-family: Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5vw;
     margin: 40px;
     padding: 10px;
     background-color: rgb(223, 212, 212);
 }
 
-hr {
-    color: yellow;
+body h2{
+font-size: 1rem;
 }
-
 button {
     display: flex;
     align-items: center;
@@ -29,7 +27,7 @@ button {
     color: white;
     padding: 10px;
     margin: 5px;
-    font-size: 1.5vw;
+    font-size: 1.rem;
     width: 80%;
     animation-name: pulse;
     animation-duration: 3s;
@@ -38,74 +36,83 @@ button {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: "header1 header1 header1"
-        "header2 header2 header2"
-        "principal principal principal"
-        "section1 section1 section1"
-        "section2 section2 section2"
-        "footer1 footer1 footer1"
-        "footer2 footer2 footer2";
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,auto);
+    grid-template-areas: 
+        "header1 header1 header1 header1"
+        "header2 header2 header2 header2"
+        "principal principal principal principal" 
+        "section1 section1 section1 section1"
+        "section2 section2 section2 section2"
+        "footer1 footer1 footer1 footer1"
+        "footer2 footer2 footer2 footer2"
+        "footer3 footer3 footer3 footer3"
+        ;
 }
 
+.box{
+    border: 2px solid red;
+}
 .header1 {
-    grid-area: header1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 6vw;
+    grid-area: header1; 
 }
-
 .header2 {
     grid-area: header2;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vw;
+    padding: 5px;
 }
 
 .principal {
     grid-area: principal;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 .section1 {
     grid-area: section1;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    margin: 10px;
+    justify-content: center;
 }
 
 .section2 {
     grid-area: section2;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .footer1 {
     grid-area: footer1;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
-
 .footer2 {
     grid-area: footer2;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    height: 10vw;
+    justify-content: center;
+}
+.footer3{
+    grid-area: footer3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* logo pegado */
+
+/*-------------logo pegado----------------*/
 #pegado img {
     width: 5vw;
     height: 5vw;
@@ -113,16 +120,22 @@ button {
     right: 50px;
 }
 
-/* social iconos */
+/*-------------header1------------*/
+
 #social-h {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 2px;
 }
 
 #social-h img {
-    width: 3vw;
+    width: 80%;
+    max-width: 2rem;
+    min-width: 1rem;
 }
 
-/* logo y menu de navegacion */
+/*--------------header2------------*/
 #logo-h {
     display: flex;
     justify-content: center;
@@ -139,7 +152,7 @@ button {
     display: flex;
     background-color: RGB(1, 130, 213);
     border-radius: 5px;
-    width: 90%;
+    width: 70%;
     height: 4vw;
     align-items: center;
     justify-content: center;
@@ -149,7 +162,6 @@ button {
     text-decoration: none;
     font-style: oblique;
     margin-right: 2vw;
-    font-size: 2vw;
     color: RGB(255, 255, 255);
 }
 
@@ -157,40 +169,43 @@ button {
     background-color: red;
 }
 
-/*----------- principal -------*/
+/*--------------principal--------------*/
 
 .tarjeta-m {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 40%;
+    width: 100%;
     margin: 10px;
 }
 
-.tarjeta-m img,
-p {
-    width: 30vw;
+.tarjeta-m img,p,button{
+    width: 80%;
     margin: 5px;
 }
 
-/*----------- Promociones -----------section 1---*/
+
+
+
+/*-------------section 1---------------*/
 
 .promo-m {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    margin: 5px;
+    width: 100%;
 }
 
 .promo-m img {
-    width: 20vw;
-    height: 25vw;
+    width: 80%;
     padding: 5px;
 }
 
-/*-------Info-----------section 2----------*/
+
+
+
+/*--------------section 2--------------*/
 
 .info-m1 {
     display: flex;
@@ -198,127 +213,102 @@ p {
     align-items: center;
     justify-content: center;
     margin: 5px;
-    width: 40vw;
-}
-
-.info-m2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    width: 40vw;
+    width: 100%;
 }
 
 .info-m1 img {
-    width: 25vw;
+    width: 80%;
     margin: 5px;
 }
 
-.info-m2 img {
-    width: 25vw;
-    margin: 5px;
-}
 
 .info-m1 p {
+    border: 1px solid red;
     text-align: center;
     margin: 10px;
 }
 
-.info-m2 p {
-    text-align: center;
-    margin: 10px;
-}
 
 
-
-/*----------footer 1-----------------*/
+/*----------------footer1-----------------*/
 
 .pie-f {
-    text-align: center;
-    margin: 5px;
-    width: 10%;
-}
-
-.pie-f img {
-    width: 5vw;
-    margin: 5px;
-}
-
-.text-f {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px;
+}
+
+.pie-f img{
+    width: 25%;
+    margin: 5px;
     text-align: center;
-    margin: 1px;
-    width: 20%;
+}
+.pie-f a, h2{
+    margin: 5px;
+    text-align: center;
+    width: auto;
 }
 
-.text-f a,
-h2 {
-    font-size: 90%;
-    margin: 1px;
-    text-decoration: none;
-}
 
-/*-------------------------footer 2 ----------------------*/
-#logo-f {
+
+
+/*-------------------------footer2---------------------*/
+
+.foot2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 33.3%;
-}
-
-#logo-f img {
-    width: 8vw;
-}
-
-#social-f {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 33.3%;
+    width: 100%;
 }
 
-#social-f img {
-    width: 4vw;
-    margin: 5px;
+#logo{
+width: 30%;
 }
 
-#social-f h2 {
-    font-size: 1.5vw;
-}
-
-
-#news-f {
+.foot2 h2, a{
     text-align: center;
-    width: 33.3%;
+    width: auto;
+}
+
+
+.iconos-f{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.iconos-f img{
+    width: 80%;
+}
+
+.news-f {
+    width: 100%;
 }
 
 #news-f h2 {
-    font-size: 1.5vw;
+    
+    width: auto;
 }
 
-#news-f input {
-    font-size: 1.3vw;
-    width: 100%;
-    height: 20px;
-}
 
 #form1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-#form1 button {
-    padding: 5px;
-    width: 7vw;
+#form1 input {
+    width: 100%;
 }
 
-/*--------------- Desarrollado por----------- */
+/*---------------footer3----------- */
 #pie3-f {
-    font-size: 1vw;
     font-style: italic;
     text-align: center;
 }
@@ -327,194 +317,4 @@ h2 {
     margin-right: 50px;
 }
 
-
-/*-----Media Queries----------*/
-
-@media (max-width: 768px) {
-    body {
-        margin: 5px;
-    }
-
-    .container {
-        background-color: aqua;
-    }
-
-    .header1 {}
-
-    .header2 {}
-
-    .principal {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-
-    .principal img {
-        width: 40vh;
-    }
-
-    .section1 {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-
-    .section1 img {
-        width: 40vh;
-        height: auto;
-    }
-
-    .section2 {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-
-    .section2 img {
-        width: 40vh;
-        height: auto;
-    }
-
-    .section2 p {
-        background-color: bisque;
-        width: 40vh;
-        font-size: 1rem;
-    }
-
-
-
-    .footer1 {}
-
-    .footer2 {}
-}
-
-
-
-
-
-
-
-
-
-
-
-/*-------------------Pagina de Conctactos-------------*/
-#section1-m {
-    text-align: center;
-    margin: 10px;
-}
-
-#section1-m img {
-    width: 80%;
-}
-
-#section2-m {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-}
-
-#div1-s2 {
-    width: 30%;
-    margin-right: 10px;
-}
-
-#div2-s2 {
-    margin-left: 10px;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#div2-s2 iframe {
-    width: 90%;
-    height: 90%;
-
-}
-
-#article1-m {
-    text-align: center;
-}
-
-#div1-a1-m {
-    margin-top: 20px;
-}
-
-#div1-a1-m p {
-    text-align: justify;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-/*-------------Pagina de Nosotros-------------*/
-#div1-m-nosotros {
-    width: 100%;
-    text-align: center;
-}
-
-#div1-m-nosotros img {
-    margin: 10px;
-    width: 80%;
-}
-
-
-#section1-m-nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#div2-m-nosotros {
-    margin: 10px;
-    width: 50%;
-}
-
-#div2-m-nosotros p {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 30px;
-    margin-right: 10px;
-    font-size: 2rem;
-}
-
-#div3-m-nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-
-#div3-m-nosotros iframe {
-    margin: 10px;
-    width: 35vw;
-    height: 35vw;
-}
-
-#div4-m-nosotros {
-    text-align: center;
-    width: 100%;
-}
-
-#div4-m-nosotros img {
-    text-align: center;
-    width: 80%;
-    margin: 20px;
-}
-
-/*---------------lubricentro---------*/
-#constructor {
-    text-align: center;
-    margin: 50px;
-}
-
-#enconstruccion {
-    text-align: center;
-    background-color: red;
-    color: white;
-    margin: 20px;
-}
+/*---------fin---------*/
